@@ -1,0 +1,112 @@
+body{
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box{
+    margin-top: 51px;
+    width: 347px;
+    height: 573px;
+    background-color: rgb(212, 58, 58);
+    border: black 10px solid;
+    position: relative;
+    overflow: hidden;
+
+}
+.score {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    z-index: 1001;
+}
+.heightscore {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    z-index: 1001;
+}
+
+.wall{
+    position: absolute;
+    width: 100%;
+    height: 20px;
+    background: #000;
+    position:absolute;
+    animation:moveDown 5s linear forwards ;
+}
+
+.hole{
+    width: 90px;
+    height: 20px;
+    background-color: rgb(212, 58, 58);
+    position: absolute;
+    animation:moveDown 5s linear forwards ;
+}
+
+
+.ball{
+    position: absolute;
+    bottom: 17px;
+    width: 32px;
+    height: 31px;
+    background-color: aliceblue;
+    right: 158px;
+    border-radius: 50%;
+z-index:1000;
+}
+
+
+
+.paused {
+    animation-play-state: paused !important;
+}
+
+
+
+
+ @keyframes moveDown {
+    0%{
+        top: 0px;
+    }
+
+    100%{
+        top: 100%;
+        display: none;
+        visibility: hidden;
+    }
+} 
+
+.game-over {
+    font-family: Arial, Helvetica, sans-serif;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background:white;
+    color: white;
+    padding: 84px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 24px;
+    z-index: 2000;
+    color: #000;
+  }
+  .game-over button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+  }
+  
+  .fa-solid.fa-rotate-right{
+font-size: 30px;  
+cursor: pointer;
+}
